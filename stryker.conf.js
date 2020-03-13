@@ -2,10 +2,11 @@
  * @type {import('@stryker-mutator/api/core').StrykerOptions}
  */
 module.exports = {
-  mutator: "",
+  mutator: "javascript",
   packageManager: "npm",
   reporters: ["html", "clear-text", "progress"],
-  testRunner: "",
-  transpilers: [],
-  coverageAnalysis: "all"
+  testRunner: "jest",
+  coverageAnalysis: "off",
+  mutate: ["src/**/*.js"],
+  tempDirName: "stryker-tmp"
 };
